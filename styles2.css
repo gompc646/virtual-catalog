@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Fraunces:ital,wght@0,400;0,700;1,400&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap');
+
+
+@font-face {
+  font-family: 'BigBird';
+  src: url('TAYBigBird copy.otf') format('opentype');
+}
+.imghead {
+  text-align: center;
+  margin: 20px auto;
+  top:100px;
+  padding: 50px;
+}
+
+.imghead img {
+  width: 800px; /* change this value */
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  top: 70 px;
+  padding: 2 px;
+}
+/* BASE */
+body {
+  margin: 0;
+  font-family: "Athelas", Georgia, serif;
+  line-height: 1.7;
+  background-color: rgb(255, 254, 250);
+  background-image: radial-gradient(rgba(0,0,0,0.03) 1px, transparent 1px);
+  background-size: 4px 4px;
+}
+ 
+
+/* ARTICLE */
+.article {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 120px 20px;
+  font-size: 18px;
+  color: rgb(35, 5, 5);
+}
+ 
+/* HEADINGS */
+h1, h2, h3 {
+  font-family: 'Cormorant Garamond', serif;
+  letter-spacing: .5px;
+  color: rgb(14, 31, 181);
+}
+ 
+h1 {
+  font-size: 64px;
+  line-height: 1;
+  margin-bottom: 30px;
+  max-width: 900px;
+  font-family: 'Tay Big Bird';
+}
+ 
+h2 {
+  font-size: 30px;
+  line-height: 1;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  max-width: 750px;
+  font-family: 'BigBird', serif;
+  color:brown;
+}
+
+ 
+h3 {
+  font-size: 20px;
+  line-height: 1;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  max-width: 750px;
+  font-family: 'BigBird', serif;
+  color:rgb(37, 6, 6);
+}
+ 
+ 
+h4 {
+  font-size: 20px;
+  line-height: 1;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  max-width: 750px;
+  font-family: 'BigBird', serif;
+  color:rgb(102, 16, 16);
+}
+
+h5 {
+  font-size: 15px;
+  line-height: 1;
+  margin-top: 5px;
+  margin-bottom: 30px;
+  max-width: 750px;
+  font-family: 'athelas', serif;
+font-style: italic;
+  color:rgb(13, 25, 71);
+}
+
+/* PARAGRAPHS */
+p {
+  margin-bottom: 24px;
+  line-height: 1.75;
+  hyphens: auto;
+  text-indent: 1.2em;
+}
+ 
+p:first-of-type {
+  text-indent: 0;
+}
+ 
+/* IMAGES */
+.article img {
+  width: 100%;
+  max-width: 720px;
+  display: block;
+  margin: 40px auto;
+}
+ 
+.firstchart img,
+.ej2 img,
+.ej3 img {
+  width: 700px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 40px auto;
+}
+ 
+#stitchPattern {
+  position: fixed;
+  top: 0;
+  left: 15px;
+  white-space: pre;
+  font-family: monospace;
+  font-size: 18px;
+  line-height: .75;
+  letter-spacing: .75px;
+  color: rgb(11, 11, 180);
+  pointer-events: none;
+  z-index: 999;
+}
+
+.stitch-art {
+  display: block;
+  white-space: pre;
+  font-family: monospace;
+  font-size: 13px;
+  line-height: 1.1;
+  letter-spacing: 5px;
+  color:  rgba(34, 29, 116, 0.85);
+  margin: 40px auto;
+  text-align: center;
+}
+ 
+.stitch-art-left {
+  display: block;
+  white-space: pre;
+  font-family: monospace;
+  font-size: 13px;
+  line-height: 1.1;
+  letter-spacing: 5px;
+  color:  rgba(34, 29, 116, 0.85);
+  margin: 40px 0;
+  text-align: left;
+}
+ 
+/* section number markers — larger */
+.stitch-number {
+  display: block;
+  white-space: pre;
+  font-family: monospace;
+  font-size: 16px;
+  line-height: 1.1;
+  letter-spacing: 6px;
+  color:  rgba(34, 29, 116, 0.85);
+  margin: 60px 0 20px 0;
+}
+
+/* ── STITCH TITLE ── */
+#stitch-title {
+  display: block;
+  position:relative;
+  left:360px;
+  top:80px;
+  white-space: pre;
+  font-family: monospace;
+  font-size: 10px;
+  line-height: 6pt;
+  letter-spacing: 1px;
+  color:  rgba(49, 44, 194, 0.85);
+  margin: 0 0 30px 0;
+  overflow-x: auto;
+}
+
+body {
+  background-color: rgb(255, 249, 249);
+  background-image:
+    /* cross marks at every 4th intersection */
+    radial-gradient(rgba(84,3,3,0.07) 1px, transparent 1px),
+    /* fine grid lines */
+    linear-gradient(rgba(84,3,3,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(84,3,3,0.04) 1px, transparent 1px);
+  background-size:
+    24px 24px,
+    6px 6px,
+    6px 6px;
+  background-position:
+    0 0,
+    0 0,
+    0 0;
+}
+
+body.blue-pattern #stitchPattern {
+  color: rgb(24, 47, 108);
+}

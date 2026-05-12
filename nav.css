@@ -1,0 +1,194 @@
+/* ── STITCH SPINE ───────────────────────────────────────────────── */
+#stitch-spine {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 14px;
+  padding: 20px 10px;
+}
+
+/* ── HOME ICON ─────────────────────────────────────────────────── */
+.spine-home {
+  position: relative;
+  text-decoration: none;
+  display: block;
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+  margin-bottom: 4px;
+}
+
+.spine-home:hover {
+  opacity: 0.8;
+}
+
+.spine-home pre {
+  font-family: monospace;
+  font-size: 5px;
+  line-height: 1.1;
+  letter-spacing: 1px;
+  color: rgba(84,3,3,1);
+  margin: 0;
+  white-space: pre;
+}
+
+/* ── DIVIDER ───────────────────────────────────────────────────── */
+.spine-divider {
+  width: 20px;
+  height: 1px;
+  background: rgba(84,3,3,0.15);
+  align-self: flex-end;
+  margin: 2px 0;
+}
+
+/* ── ARTICLE NUMBERS ───────────────────────────────────────────── */
+.spine-num {
+  position: relative;
+  text-decoration: none;
+  display: block;
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+}
+
+.spine-num:hover {
+  opacity: 0.65;
+}
+
+.spine-num.current {
+  opacity: 0.6;
+}
+
+.spine-num pre {
+  font-family: monospace;
+  font-size: 5.6px;
+  line-height: 1;
+  letter-spacing: 1.1px;
+  color: rgb(0, 6, 124);
+  margin: 0;
+  white-space: pre;
+}
+
+/* ── SPINE TOOLTIP ─────────────────────────────────────────────── */
+.spine-tip {
+  position: absolute;
+  right: calc(100% + 12px);
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgb(255,249,249);
+  border: 1px solid rgba(84,3,3,0.15);
+  padding: 5px 10px;
+  font-family: "Athelas", Georgia, serif;
+  font-size: 11px;
+  color: rgba(84,3,3,0.7);
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  letter-spacing: 0.5px;
+}
+
+.spine-num:hover .spine-tip,
+.spine-home:hover .spine-tip {
+  opacity: 1;
+}
+
+/* ── CORNER TAG — bottom right (next) ─────────────────────────── */
+#corner-tag {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  cursor: pointer;
+}
+
+.tag-fold {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 40px 40px;
+  border-color: transparent transparent rgba(84,3,3,0.12) transparent;
+  transition: border-width 0.3s ease;
+  align-self: flex-end;
+}
+
+#corner-tag:hover .tag-fold {
+  border-width: 0 0 50px 50px;
+}
+
+.tag-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 0 10px 10px 20px;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  max-width: 200px;
+  text-align: right;
+}
+
+#corner-tag:hover .tag-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.tag-next {
+  font-family: monospace;
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: rgba(84,3,3,0.4);
+  text-transform: lowercase;
+  margin-bottom: 4px;
+}
+
+.tag-title {
+  font-family: "Athelas", Georgia, serif;
+  font-size: 12px;
+  color: rgba(84,3,3,0.75);
+  line-height: 1.4;
+}
+
+/* ── CORNER TAG — top right (prev) ───────────────────────────── */
+#corner-tag-prev {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  cursor: pointer;
+}
+
+.tag-fold-prev {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 40px 40px 0 0;
+  border-color: rgba(84,3,3,0.12) transparent transparent transparent;
+  transition: border-width 0.3s ease;
+  align-self: flex-end;
+}
+
+#corner-tag-prev:hover .tag-fold-prev {
+  border-width: 60px 60px 0 0;
+}
+
+#corner-tag-prev .tag-content {
+  order: -1;
+  padding: 10px 10px 0 20px;
+}
+
+#corner-tag-prev:hover .tag-content {
+  opacity: 1;
+  transform: translateY(0);
+}

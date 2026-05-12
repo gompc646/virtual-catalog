@@ -1,0 +1,130 @@
+@font-face {
+  font-family: 'BigBird';
+  src: url('TAYBigBird-copy.otf') format('opentype');
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Athelas", Georgia, serif;
+  background-color: rgb(255, 249, 249);
+  background-image: radial-gradient(rgba(0,0,0,0.03) 1px, transparent 1px);
+  background-size: 4px 4px;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* HEADER */
+header {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+  pointer-events: none;
+}
+
+header img {
+  max-width: 600px;
+  width: 90vw;
+  opacity: 0.9;
+  display: block;
+  margin: 0 auto;
+}
+
+
+header p {
+  font-family: "courier";
+  font-size: 14px;
+  color: rgba(3, 0, 82, 0.703);
+  margin-top: 10px;
+  letter-spacing: 1px;
+  text-transform: lowercase;
+}
+
+/* PATCHES */
+.patch {
+  position: absolute;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.patch-number {
+  white-space: pre;
+  font-family: monospace;
+  line-height: .9;
+  letter-spacing: 1.5px;
+  color: rgb(175, 0, 0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  display: block;
+}
+
+.patch-title {
+  position: absolute;
+  top: 10;
+  left: 0;
+  width: 180px;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  padding: 8px 0;
+}
+
+.patch-title h2 {
+  font-family: 'BigBird', serif;
+  font-size: 13px;
+  color: rgb(117, 67, 1);
+  line-height: 1;
+  letter-spacing: 0.5px;
+  font-weight: normal;
+  margin-bottom: 6px;
+}
+
+.patch-title .author {
+  font-family: monospace;
+  font-size: 8px;
+  color: rgb(40, 75, 165);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.patch:hover .patch-number {
+  opacity: 0.15;
+  transform: scale(0.97);
+}
+
+.patch:hover .patch-title {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.socks{
+    max-width: 200px;
+}
+ 
+body {
+  background-color: rgb(255, 249, 249);
+  background-image:
+    /* cross marks at every 4th intersection */
+    radial-gradient(rgba(84,3,3,0.07) 1px, transparent 1px),
+    /* fine grid lines */
+    linear-gradient(rgba(84,3,3,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(84,3,3,0.04) 1px, transparent 1px);
+  background-size:
+    24px 24px,
+    6px 6px,
+    6px 6px;
+  background-position:
+    0 0,
+    0 0,
+    0 0;
+}
